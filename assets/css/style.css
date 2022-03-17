@@ -19,12 +19,6 @@ body {
   flex-direction: column;
 }
 
-.toolbar {
-  display: flex;
-  justify-content: space-between;
-  padding: 5px;
-}
-
 .menubar {
   display: flex;
   justify-content: space-between;
@@ -49,7 +43,12 @@ body {
 .headline {
   width: 375px;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
+  background: url(../images/Ellipse.svg);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position-y: -8%;
 }
 
 .headtext {
@@ -117,6 +116,10 @@ body {
   margin: 24px 0;
 }
 
+.divider {
+  border: 1px solid #646369;
+}
+
 .surport-text .items {
   width: 310px;
   height: 462.15px;
@@ -132,9 +135,9 @@ body {
   display: flex;
   flex-direction: column;
   width: 140px;
-  flex-basis: 45%;
+  flex-basis: 32%;
   height: 214.15px;
-  margin: 0 2px;
+  margin: 0 24px;
   padding: 5px;
 }
 
