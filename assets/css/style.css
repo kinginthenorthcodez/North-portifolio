@@ -306,40 +306,17 @@ body {
   width: 327px;
 }
 
-.card #firstTitle {
-  background: url(../images/EllipseFT.svg);
-  background-size: 150px 482px;
-  background-repeat: no-repeat;
-  background-position-y: 100%;
-  background-position-x: 0%;
-}
-
-.card #secondTitle {
-  background: url(../images/EllipseST.svg);
-  background-size: 150px 482px;
-  background-repeat: no-repeat;
-  background-position-y: 200%;
-  background-position-x: 100%;
-}
-
-.card #thirdTitle {
-  background: url(../images/EllipseTT.svg);
-  background-size: 200px 482px;
-  background-repeat: no-repeat;
-  background-position-y: 200%;
-  background-position-x: 0%;
-}
-
-.card #fourthTitle {
-  background: url(../images/EllipseFTT.svg);
-  background-size: 150px 482px;
-  background-repeat: no-repeat;
-  background-position-y: 180%;
-  background-position-x: 100%;
+#workbg {
+  background-image: url(../images/EllipseFT.svg), url(../images/EllipseST.svg), url(../images/EllipseTT.svg), url(../images/EllipseFTT.svg);
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+  background-position-y: 12%, 37%, 62%, 86%;
+  background-position-x: 0%, 100%, 0%, 100%;
 }
 
 .card .categories {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 2px;
   list-style: none;
   padding: 20px;
   justify-content: space-between;
@@ -358,12 +335,10 @@ body {
   background: #191765;
 }
 
-.card .categories li:not(:first-child)::before {
-  width: 1px;
-  height: 40px;
+.card .categories li:not(:nth-child(1)) {
   border-left: 1px solid #555;
-  background: #555;
-  margin: 0 8px;
+  height: 25px;
+  padding-left: 15px;
 }
 
 .btn {
