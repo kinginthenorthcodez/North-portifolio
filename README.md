@@ -3,6 +3,7 @@
 # My Portifolio
 ![screenshot](./app_sceenshot.png)
 > A Project detailing about me and my works.
+> Everything about bots and nuts
 
 
 ## Built With
