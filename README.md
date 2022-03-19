@@ -1,7 +1,7 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
 # My Portifolio
-![screenshot](./app_sceenshot.png)
+![screenshot](./app_screenshot.png)
 > A Project detailing about me and my works.
 > Everything about bots and nuts
 
