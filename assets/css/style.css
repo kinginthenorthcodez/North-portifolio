@@ -398,7 +398,7 @@ footer .social {
 
 .contact-form {
   width: 327px;
-  height:auto;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
