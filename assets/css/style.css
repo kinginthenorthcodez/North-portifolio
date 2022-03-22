@@ -165,6 +165,13 @@ body {
   color: #9490ff;
 }
 
+footer .social {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 25px;
+}
+
 .surport-text .social {
   justify-content: center;
   align-items: center;
@@ -196,6 +203,18 @@ body {
   flex: none;
   flex-grow: 0;
   word-wrap: break-word;
+  margin: 24px 0;
+}
+
+.contact-sec p {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  word-wrap: break-word;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #f5f5ff;
   margin: 24px 0;
 }
 
@@ -357,13 +376,13 @@ body {
   color: #555;
 }
 
-/* contact form*/
+/* contact form */
 
 .contact-sec {
   display: flex;
   flex-direction: column;
   width: 327px;
-  padding:24px;
+  padding: 24px;
 }
 
 .contact-sec h3 {
@@ -375,18 +394,6 @@ body {
   align-items: center;
   text-align: center;
   color: #9390ff;
-}
-
-.contact-sec p {
-  font-family: 'Inter',sans-serif;
-  font-style: normal;
-  word-wrap: break-word;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-  text-align: center;
-  color: #f5f5ff;
-  margin: 24px 0;
 }
 
 .contact-form {
@@ -403,14 +410,14 @@ body {
 .contact-form input {
   width: 327px;
   height: 48px;
-  font-family: 'Inter';
+  font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
   line-height: 24px;
   color: #81818c;
   background: #f7f3ff;
-  border: 1px solid #9490FF;
+  border: 1px solid #9490ff;
   box-sizing: border-box;
   padding: 15px;
 }
@@ -418,7 +425,7 @@ body {
 .contact-form textarea {
   width: 327px;
   height: 148px;
-  font-family: 'Inter';
+  font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
@@ -434,13 +441,6 @@ body {
 
 footer {
   width: 327px;
-}
-
-footer .social {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin-top: 25px;
 }
 
 footer a {
