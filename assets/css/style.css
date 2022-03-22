@@ -133,19 +133,12 @@ body {
 }
 
 .item {
-  display: flex;
-  flex-direction: column;
-  width: 140px;
-  flex-basis: 32%;
-  height: 214.15px;
   margin: 0 24px;
   padding: 5px;
 }
 
 .list-items {
   list-style: none;
-  display: flex;
-  flex-direction: column;
 }
 
 .list-items li {
@@ -154,12 +147,11 @@ body {
   font-weight: 400;
   font-size: 15px;
   line-height: 24px;
-  align-items: center;
   color: #f5f5ff;
-  flex: none;
-  flex-grow: 0;
+  float: left;
+  display: inline-block;
   margin: 0 0;
-  padding-top: 10px;
+  padding-right: 10px;
 }
 
 .item h3 {
@@ -363,4 +355,104 @@ body {
 .btn button:hover {
   background: #dcdce8;
   color: #555;
+}
+
+/* contact form*/
+
+.contact-sec {
+  display: flex;
+  flex-direction: column;
+  width: 327px;
+  padding:24px;
+}
+
+.contact-sec h3 {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 44px;
+  align-items: center;
+  text-align: center;
+  color: #9390ff;
+}
+
+.contact-sec p {
+  font-family: 'Inter',sans-serif;
+  font-style: normal;
+  word-wrap: break-word;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #f5f5ff;
+  margin: 24px 0;
+}
+
+.contact-form {
+  width: 327px;
+  height:auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  margin: 40px 0;
+  gap: 24px;
+}
+
+.contact-form input {
+  width: 327px;
+  height: 48px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: #81818c;
+  background: #f7f3ff;
+  border: 1px solid #9490FF;
+  box-sizing: border-box;
+  padding: 15px;
+}
+
+.contact-form textarea {
+  width: 327px;
+  height: 148px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: #81818c;
+  background: #fff;
+  padding: 15px;
+}
+
+.contact-form .btn {
+  align-self: center;
+}
+
+footer {
+  width: 327px;
+}
+
+footer .social {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+footer a {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+  color: #ebebff;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  text-decoration: none;
 }
