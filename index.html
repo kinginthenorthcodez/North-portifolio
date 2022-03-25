@@ -17,6 +17,17 @@
             <p>North Code</p>
             <img src="./assets/images/bars/IconMenu.png" alt="menuicon">
            </div>
+           <div class="desktop-menu">
+             <p>North Code</p>
+             <div class="main-menu">
+               <ul class="menu-items">
+                 <li class="menu-item"><a href="#">Portifolio</a></li>
+                 <li class="menu-item"><a href="#">About</a></li>
+                 <li class="menu-item"><a href="#">Contact</a></li>
+               </ul>
+               <img src="./assets/images/Icon-Mail.svg" alt="icon">
+             </div>
+           </div>
        </nav>
    </header>
 
@@ -66,19 +77,28 @@
         </div>
       </div>
       <hr class="divider">
-      <div class="social">
-       <img src="./assets/images/GitHub.svg" alt="icon">
-       <img src="./assets/images/Angelist.svg" alt="icon">
-       <img src="./assets/images/Linkedin.svg" alt="icon">
-       <img src="./assets/images/Twitter.svg" alt="icon">
-       <img src="./assets/images/Medium.svg" alt="icon">
-      </div>
-      <div class="more">
-        <img src="./assets/images/Group55.svg" alt="icon">
-        <p>Work</p>
-      </div>  
+      <div class="social-items">
+        <div class="more m1">
+          <img src="./assets/images/Group55.svg" alt="icon">
+          <p>Work</p>
+        </div> 
+        <div class="social">
+         
+         <img src="./assets/images/GitHub.svg" alt="icon">
+         <img src="./assets/images/Angelist.svg" alt="icon">
+         <img src="./assets/images/Linkedin.svg" alt="icon">
+         <img src="./assets/images/Twitter.svg" alt="icon">
+         <img src="./assets/images/Medium.svg" alt="icon">
+        </div>
+        <div class="more m2">
+          <img src="./assets/images/Group55.svg" alt="icon">
+          <p>Work</p>
+        </div> 
+      </div>     
   </div>
 </section>
+
+<div class="workg">
 <section class="work" id="workbg">
     <div class="worktitle">
         <h1>MY RECENT<br> WORKS</h1>
@@ -89,9 +109,11 @@
          <div class="profile">
 
          </div>
-         <div class="workText">
-         <h3>Multi-Post Stories</h3>
-         <p>
+         <div class="card-items">
+           <div class="card-text">
+          <div class="workText">
+          <h3>Multi-Post Stories</h3>
+          <p>
             A daily selection of privately personalized reads;
              no accounts or sign-ups required. 
              has been the industry's standard dummy text ever since the 1500s, 
@@ -107,11 +129,16 @@
           <div class="btn">
               <button type="button">See Project</button>
           </div>
+          </div>
+        </div>
        </div>
+     
        <div class="card">
         <div class="profile">
 
         </div>
+        <div class="card-items">
+        <div class="card-text">
         <div class="workText">
         <h3>Multi-Post Stories</h3>
         <p>
@@ -130,11 +157,43 @@
          <div class="btn">
              <button type="button">See Project</button>
          </div>
+        </div>
+        </div>
       </div>
       <div class="card">
         <div class="profile">
 
         </div>
+        <div class="card-items">
+          <div class="card-text">
+          <div class="workText">
+            <h3>Multi-Post Stories</h3>
+            <p>
+           A daily selection of privately personalized reads;
+            no accounts or sign-ups required. 
+            has been the industry's standard dummy text ever since the 1500s, 
+           when an unknown printer took a standard dummy text.
+            </p>
+           </div>
+           <ul class="categories">
+            <li>css</li>
+            <li>html</li>
+            <li>Bootstrap</li>
+            <li>Ruby</li>
+         </ul>
+         <div class="btn">
+             <button type="button">See Project</button>
+         </div>
+        </div>
+        </div>
+      </div>
+      
+      <div class="card">
+        <div class="profile">
+
+        </div>
+        <div class="card-items">
+        <div class="card-text">
         <div class="workText">
         <h3>Multi-Post Stories</h3>
         <p>
@@ -153,45 +212,26 @@
          <div class="btn">
              <button type="button">See Project</button>
          </div>
-      </div>
-      <div class="card">
-        <div class="profile">
-
-        </div>
-        <div class="workText">
-        <h3>Multi-Post Stories</h3>
-        <p>
-           A daily selection of privately personalized reads;
-            no accounts or sign-ups required. 
-            has been the industry's standard dummy text ever since the 1500s, 
-           when an unknown printer took a standard dummy text.
-        </p>
-        </div>
-         <ul class="categories">
-            <li>css</li>
-            <li>html</li>
-            <li>Bootstrap</li>
-            <li>Ruby</li>
-         </ul>
-         <div class="btn">
-             <button type="button">See Project</button>
+         </div>
          </div>
       </div>
     </div>
 </section>
+</div>
 <section class="contact-sec">
-  <h3> CONTACT US  </h3>
+  <h3 class="headone"> CONTACT US  </h3>
+  <h3 class="headtwo"> Let's Chat </h3>
    <p>If you have an application you are interested in developing, 
     a feature that you need built or a project that needs coding. I’d love to help with it 
     </p>
 <form class="contact-form" action="https://formspree.io/f/mknyzlre" method="post">
-<input type="text" name="username" placeholder="Text Input" maxlength="30" required>
+<input type="text" name="username" placeholder="Name" maxlength="30" required>
 <input type="email" name="email" placeholder="jeremy@gmail.com" maxlength="30" required>
 <textarea name="text" placeholder="Enter text here" maxlength="500" required>
 </textarea>
 
 <div class="btn">
-  <button type="submit">See Project</button>
+  <button type="submit">Send</button>
 </div>
 </form>
 
