@@ -575,7 +575,7 @@ footer a {
     color: #ebebff;
     text-decoration: none;
   }
-  
+
   .desktop-menu .main-menu .menu-items .menu-item a {
     color: #fff;
     text-decoration: none;
@@ -734,7 +734,7 @@ footer a {
   }
 
   .surport-text .social {
-     display: flex;
+    display: flex;
   }
 
   .surport-text .social img:hover {
