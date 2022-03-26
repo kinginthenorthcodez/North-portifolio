@@ -42,7 +42,7 @@ body {
 
 .headline {
   width: 375px;
-  height: 1100.15px;
+  height: auto;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -56,7 +56,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 327px;
-  height: 154px;
+  height: auto;
   padding: 0;
   align-items: center;
   margin-top: 10px;
@@ -584,10 +584,10 @@ footer a {
   .headline {
     width: 1156px;
     height: auto;
+    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    padding: 114px 0;
     background: url(../images/circle1header.svg), url(../images/circle2header.svg);
     background-repeat: no-repeat, no-repeat;
     background-size: auto, auto;
@@ -779,23 +779,21 @@ footer a {
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
-    padding: 114px 0;
-    margin: 88px 0;
+    padding: 14px 0;
     position: relative;
-    left: 142px;
+    margin: 0 auto;
   }
 
   .workg {
     background-image: url(../images/Ellipse19.svg), url(../images/Ellipse20.svg), url(../images/Ellipse21.svg), url(../images/Ellipse22.svg);
     background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
-    background-position-y: 15%, 47%, 66%, 81%;
+    background-position-y: 5%, 47%, 66%, 83%;
     background-position-x: -10%, 100%, 0%, 100%;
   }
 
   .worktitle {
     width: 1156px;
-    height: 155px;
-    margin: 88px 0;
+    height: auto;
   }
 
   .worktitle h1 {
@@ -840,7 +838,7 @@ footer a {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     width: 1156px;
-    margin: 88px 0;
+    grid: 0;
   }
 
   .work .cards .card {
@@ -848,7 +846,6 @@ footer a {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
-    margin: 88px 0;
     align-items: center;
   }
 
