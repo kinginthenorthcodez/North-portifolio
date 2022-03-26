@@ -856,6 +856,13 @@ footer a {
     order: 0;
     flex-grow: 0;
     margin: 0 24px;
+    transition: all 2s ease-in-out;
+  }
+
+  /* project card transition */
+
+  .profile:hover {
+    transform: scale(1.1);
   }
 
   .work .cards .card:nth-child(even) .profile {
