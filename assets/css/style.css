@@ -862,6 +862,16 @@ footer a {
     order: 1;
   }
 
+  /* project card transition*/
+  
+  .profile {
+    transition: all 1s ease-in-out
+  }
+
+  .profile:hover {
+    transform: scale(1.1);
+  }
+
   .card .card-items {
     display: flex;
     flex-direction: column;
