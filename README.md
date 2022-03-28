@@ -11,6 +11,9 @@
 - HTML 5
 - CSS
 - Linters
+- Media Queries
+- Flex box
+- Grid
 
 ## Live Demo (available)
 Feel free to check the [Live Demo](https://kinginthenorthcodez.github.io/North-portifolio/)
