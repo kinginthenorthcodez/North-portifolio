@@ -12,8 +12,8 @@
 -CSS
 -Linters
 
-## Live Demo (un-available)
--Un available for now, but you can follow up the installation process to checkout project
+## Live Demo (available)
+Feel free to check the [Live Demo](https://kinginthenorthcodez.github.io/North-portifolio/)
 
 ## Installation
 
@@ -47,6 +47,7 @@ Give a ⭐️ if you like this project!
 -My coding Parters
 - code Reviewers
 -google & stackoverflow
+-open source community
 
 ## 📝 License
 
