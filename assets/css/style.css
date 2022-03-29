@@ -26,7 +26,7 @@ body {
   align-items: center;
 }
 
-.menubar p {
+.menubar h1 {
   color: #fff;
   font-weight: 600;
 }
@@ -373,6 +373,11 @@ footer .social {
   color: #555;
 }
 
+.btn button:focus {
+  background: #dcdce8;
+  color: #555;
+}
+
 /* contact form */
 
 .contact-sec {
@@ -440,7 +445,7 @@ footer {
   width: 327px;
 }
 
-footer a {
+footer .email {
   font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -510,7 +515,7 @@ footer a {
     align-items: baseline;
   }
 
-  .desktop-menu p {
+  .desktop-menu h1 {
     color: #fff;
     font-weight: 600;
   }
@@ -564,7 +569,7 @@ footer a {
     margin: 0 10px;
   }
 
-  footer a {
+  footer .email {
     font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: 400;
