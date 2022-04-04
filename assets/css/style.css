@@ -1,4 +1,3 @@
-
 * {
   box-sizing: border-box;
   padding: 0;
@@ -63,7 +62,7 @@ body {
 }
 
 .headtext .primary-text {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 28px;
@@ -78,7 +77,7 @@ body {
 }
 
 .headtext .sub-text {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
@@ -104,7 +103,7 @@ body {
 }
 
 .intro p {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -142,7 +141,7 @@ body {
 }
 
 .list-items li {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
@@ -154,7 +153,7 @@ body {
 }
 
 .item h3 {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
@@ -198,7 +197,7 @@ footer .social {
 
 .card p {
   width: 327px;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -211,7 +210,7 @@ footer .social {
 }
 
 .contact-sec p {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-style: normal;
   word-wrap: break-word;
   font-weight: 400;
@@ -223,7 +222,7 @@ footer .social {
 }
 
 .surport-text .more p {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
@@ -245,6 +244,7 @@ footer .social {
 }
 
 /* Works section */
+
 .work {
   width: 375px;
   display: flex;
@@ -255,7 +255,7 @@ footer .social {
 }
 
 .worktitle h1 {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 30px;
@@ -293,7 +293,8 @@ footer .social {
   height: 236px;
   left: 0;
   top: 0;
-  background: linear-gradient(0deg, #f9f9f9, #f9f9f9), url(image_processing20200716-21735-f07s4k.png);
+  background: linear-gradient(0deg, #f9f9f9, #f9f9f9),
+    url(image_processing20200716-21735-f07s4k.png);
   flex: none;
   order: 0;
   flex-grow: 0;
@@ -303,7 +304,7 @@ footer .social {
 .card h3 {
   width: 327px;
   height: 103px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 32px;
@@ -331,7 +332,7 @@ footer .social {
 }
 
 .card .categories li {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 15px;
@@ -388,7 +389,7 @@ footer .social {
 }
 
 .contact-sec h3 {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 32px;
@@ -412,7 +413,7 @@ footer .social {
 .contact-form input {
   width: 327px;
   height: 48px;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
@@ -427,7 +428,7 @@ footer .social {
 .contact-form textarea {
   width: 327px;
   height: 148px;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
@@ -446,7 +447,7 @@ footer {
 }
 
 footer .email {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -460,28 +461,70 @@ footer .email {
 }
 
 /* mobile version */
+
 @media screen and (max-width: 768px) {
-  .navbar .desktop-menu {
+  .mobile-hide {
     display: none;
   }
+  .desktop-menu {
+    width: 100%;
+    height: 90vh;
+    display: block;
+    position: absolute;
+    background-color: #191765;
+    z-index: 10;
+    padding: 10px;
+    left: 0;
+    top: 80px;
+    background-image: url(../images/bars/shapes\ mobile\ menu.png);
+    background-size: cover;
+  }
+  .desktop-menu .menu-items .menu-item {
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+  }
 
+  .desktop-menu .menu-items .menu-item a {
+    color: #fff;
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .desktop-menu .main-menu img {
+      display: none;
+  }
+
+  .desktop-menu .menu-items .menu-item img {
+      display: block;
+      height: 12px;
+      width: 6px;
+  }
+  
+  .desktop-menu h1 {
+    display: none;
+  }
   #workbg {
-    background-image: url(../images/EllipseFT.svg), url(../images/EllipseST.svg), url(../images/EllipseTT.svg), url(../images/EllipseFTT.svg);
+    background-image: url(../images/EllipseFT.svg), url(../images/EllipseST.svg),
+      url(../images/EllipseTT.svg), url(../images/EllipseFTT.svg);
     background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
     background-position-y: 12%, 37%, 62%, 86%;
     background-position-x: 0%, 100%, 0%, 100%;
   }
-
   .contact-sec .headtwo {
     display: none;
   }
-
   .surport-text .social-items .m1 {
     display: none;
   }
 }
 
 /* Desktop version */
+
 @media screen and (min-width: 768px) {
   * {
     box-sizing: border-box;
@@ -489,7 +532,6 @@ footer .email {
     margin: 0;
     scroll-behavior: smooth;
   }
-
   body {
     width: 1440px;
     height: auto;
@@ -497,16 +539,18 @@ footer .email {
     background: #191765;
     padding: 10px;
   }
-
   .navbar {
     width: 1440px;
     height: 92px;
     display: flex;
     flex-direction: column;
   }
-
   .menubar {
     display: none;
+  }
+
+  .mobile-hide {
+    display: flex;
   }
 
   .desktop-menu {
@@ -519,22 +563,21 @@ footer .email {
     color: #fff;
     font-weight: 600;
   }
-
   .desktop-menu img {
     width: 24px;
     height: auto;
   }
-
   .desktop-menu img:hover {
     background: rgb(150, 145, 145);
   }
-
   .desktop-menu .main-menu {
     display: flex;
     width: 241px;
     height: 40px;
   }
-
+  .desktop-menu .menu-items .menu-item img {
+    display: none;
+  }
   .desktop-menu .main-menu .menu-items {
     display: flex;
     flex-direction: row;
@@ -543,9 +586,8 @@ footer .email {
     margin: 0 8px;
     list-style: none;
   }
-
   .list-items li {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     width: 68.08px;
     font-style: normal;
     font-weight: 400;
@@ -556,9 +598,8 @@ footer .email {
     align-items: center;
     margin: 0 0;
   }
-
   .desktop-menu .main-menu .menu-items li {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
@@ -568,9 +609,8 @@ footer .email {
     color: #fff;
     margin: 0 10px;
   }
-
   footer .email {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
@@ -580,12 +620,10 @@ footer .email {
     color: #ebebff;
     text-decoration: none;
   }
-
   .desktop-menu .main-menu .menu-items .menu-item a {
     color: #fff;
     text-decoration: none;
   }
-
   .headline {
     width: 1156px;
     height: auto;
@@ -593,7 +631,8 @@ footer .email {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    background: url(../images/circle1header.svg), url(../images/circle2header.svg);
+    background: url(../images/circle1header.svg),
+      url(../images/circle2header.svg);
     background-repeat: no-repeat, no-repeat;
     background-size: auto, auto;
     background-position-y: 25%, 50%;
@@ -601,12 +640,14 @@ footer .email {
     animation-name: zoomin;
     animation-duration: 3s;
   }
-
   @keyframes zoomin {
-    from { transform: scale(1.5); }
-    to { transform: scale(1); }
+    from {
+      transform: scale(1.5);
+    }
+    to {
+      transform: scale(1);
+    }
   }
-
   .headtext {
     display: flex;
     flex-direction: column;
@@ -616,11 +657,10 @@ footer .email {
     align-items: center;
     margin: 88px 0;
   }
-
   .headtext .primary-text {
     width: 1156px;
     height: 96px;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 90px;
@@ -635,9 +675,8 @@ footer .email {
     left: 5%;
     margin: 24px 0;
   }
-
   .headtext .sub-text {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 40px;
@@ -650,7 +689,6 @@ footer .email {
     order: 1;
     margin: 24px 0;
   }
-
   .headline .surport-text {
     width: 448px;
     height: auto;
@@ -662,9 +700,8 @@ footer .email {
     margin: 0 auto;
     gap: 10px;
   }
-
   .intro p {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
@@ -676,17 +713,14 @@ footer .email {
     flex-grow: 0;
     margin: 24px 0;
   }
-
   .divider {
     border: 1px solid #646369;
     justify-content: center;
   }
-
   .surport-text .divider {
     border: 1px solid #646369;
     width: 488px;
   }
-
   .surport-text .items {
     width: 446px;
     height: auto;
@@ -697,7 +731,6 @@ footer .email {
     flex-wrap: wrap;
     gap: 10px;
   }
-
   .item {
     display: flex;
     flex-direction: column;
@@ -706,13 +739,11 @@ footer .email {
     margin: 0 24px;
     padding: 5px;
   }
-
   .list-items {
     list-style: none;
   }
-
   .item h3 {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
@@ -722,13 +753,11 @@ footer .email {
     letter-spacing: 0.03em;
     color: #9490ff;
   }
-
   .surport-text .social-items {
     display: flex;
     width: 1023px;
     margin: 88px 0;
   }
-
   footer .social {
     display: flex;
     gap: 15px;
@@ -737,15 +766,12 @@ footer .email {
     width: 330px;
     justify-content: flex-end;
   }
-
   .surport-text .social {
     display: flex;
   }
-
   .surport-text .social img:hover {
     background: #9490ff;
   }
-
   .surport-text .more {
     display: flex;
     margin: 0 auto;
@@ -753,9 +779,8 @@ footer .email {
     padding: 10px;
     gap: 5px;
   }
-
   .contact-sec p {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-style: normal;
     word-wrap: break-word;
     font-weight: 400;
@@ -765,9 +790,8 @@ footer .email {
     color: #f5f5ff;
     margin: 24px 0;
   }
-
   .surport-text .more p {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
@@ -776,7 +800,6 @@ footer .email {
     color: #a2a3ae;
     margin: 0 12px;
   }
-
   /* Works section */
   .work {
     width: 1156px;
@@ -788,21 +811,19 @@ footer .email {
     position: relative;
     margin: 0 auto;
   }
-
   .workg {
-    background-image: url(../images/Ellipse19.svg), url(../images/Ellipse20.svg), url(../images/Ellipse21.svg), url(../images/Ellipse22.svg);
+    background-image: url(../images/Ellipse19.svg), url(../images/Ellipse20.svg),
+      url(../images/Ellipse21.svg), url(../images/Ellipse22.svg);
     background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
     background-position-y: 5%, 47%, 66%, 83%;
     background-position-x: -10%, 100%, 0%, 100%;
   }
-
   .worktitle {
     width: 1156px;
     height: auto;
   }
-
   .worktitle h1 {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 64px;
@@ -817,34 +838,28 @@ footer .email {
     animation-name: slidein;
     animation-duration: 3s;
   }
-
   @keyframes slidein {
     from {
       margin-left: 100%;
       width: 300%;
     }
-
     to {
       margin-left: 0%;
       width: 100%;
     }
   }
-
   .worktitle h1 br {
     display: none;
   }
-
   .work .divider {
     border: 1px solid #646369;
   }
-
   .work .cards {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     width: 1156px;
   }
-
   .work .cards .card {
     width: 1156px;
     display: grid;
@@ -852,28 +867,24 @@ footer .email {
     grid-template-rows: auto;
     align-items: center;
   }
-
   .card .profile {
     width: 684px;
     height: 448px;
-    background: linear-gradient(0deg, #f9f9f9, #f9f9f9), url(image_processing20200716-21735-f07s4k.png);
+    background: linear-gradient(0deg, #f9f9f9, #f9f9f9),
+      url(image_processing20200716-21735-f07s4k.png);
     flex: none;
     order: 0;
     flex-grow: 0;
     margin: 0 24px;
     transition: all 2s ease-in-out;
   }
-
   /* project card transition */
-
   .profile:hover {
     transform: scale(1.1);
   }
-
   .work .cards .card:nth-child(even) .profile {
     order: 1;
   }
-
   .card .card-items {
     display: flex;
     flex-direction: column;
@@ -882,24 +893,21 @@ footer .email {
     height: 448px;
     padding: 0;
   }
-
   .card .card-items .card-text {
     width: 448px;
     margin: 0 24px;
     display: flex;
     flex-direction: column;
   }
-
   .card .card-items .card-text .workText {
     display: flex;
     width: 448px;
     flex-wrap: wrap;
   }
-
   .card .workText h3 {
     width: 448px;
     height: 40px;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 40px;
@@ -909,9 +917,8 @@ footer .email {
     flex-grow: 0;
     margin: 24px 0;
   }
-
   .card .workText p {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
@@ -919,7 +926,6 @@ footer .email {
     color: #dfe1e6;
     margin: 24px 0;
   }
-
   .card .card-items .categories {
     display: grid;
     grid-template-columns: auto auto auto auto;
@@ -930,9 +936,8 @@ footer .email {
     width: 307px;
     margin: 24px 0;
   }
-
   .card .card-items .categories li {
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 15px;
@@ -943,17 +948,14 @@ footer .email {
     margin: 0 0;
     background: #191765;
   }
-
   .card .categories li:not(:nth-child(1)) {
     border-left: 1px solid #555;
     height: 25px;
     padding-left: 15px;
   }
-
   .btn {
     align-self: flex-start;
   }
-
   .btn button {
     position: static;
     outline-style: none;
@@ -968,12 +970,10 @@ footer .email {
     flex-grow: 0;
     margin: 24px 0;
   }
-
   .btn button:hover {
     background: #dcdce8;
     color: #555;
   }
-
   /* contact section */
   .contact-sec {
     display: flex;
@@ -983,13 +983,11 @@ footer .email {
     align-items: center;
     margin: 0 auto;
   }
-
   .contact-sec .headone {
     display: none;
   }
-
   .contact-sec .headtwo {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 40px;
@@ -999,7 +997,6 @@ footer .email {
     color: #9390ff;
     margin: 24px 0;
   }
-
   .contact-form {
     width: 684px;
     height: auto;
@@ -1010,11 +1007,10 @@ footer .email {
     margin: 88px 0;
     gap: 24px;
   }
-
   .contact-form input {
     width: 684px;
     height: 48px;
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
@@ -1026,11 +1022,10 @@ footer .email {
     box-sizing: border-box;
     padding: 15px;
   }
-
   .contact-form textarea {
     width: 684px;
     height: 148px;
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
@@ -1040,12 +1035,10 @@ footer .email {
     background: #fff;
     padding: 15px;
   }
-
   .contact-form .btn {
     align-self: center;
     width: 136px;
   }
-
   footer {
     width: 684px;
     display: flex;
