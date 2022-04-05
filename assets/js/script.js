@@ -3,7 +3,7 @@ const btnMenu = document.querySelector('#btn-menu');
 const menuImg = document.querySelector('#menu-img');
 const menuItems = document.querySelectorAll('.menu-item a');
 
-function swapIcon () {
+function swapIcon (){
   if (mainMenu.classList.contains('mobile-hide')) {
     menuImg.src = './assets/images/bars/close.png';
   } else {
@@ -16,9 +16,10 @@ btnMenu.addEventListener('click', () => {
   mainMenu.classList.toggle('mobile-hide');
 });
 
-for (const menuItem of menuItems) {
-  menuItem.addEventListener('click', () => {
-    mainMenu.classList.toggle('mobile-hide');
-    menuImg.src = './assets/images/bars/IconMenu.png';
-  });
-}
+menuItems.forEach((menuList) =>{
+menuList.addEventListener('click', () =>{
+   mainMenu.classList.toggle('mobile-hide');
+   menuImg.src = './assets/images/bars/IconMenu.png';
+});
+});
+
