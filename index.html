@@ -104,105 +104,7 @@
                 <h1>MY RECENT<br> WORKS</h1>
                 <hr class="divider">
             </div>
-            <div class="cards">
-                <div class="card">
-                    <div class="profile">
-
-                    </div>
-                    <div class="card-items">
-                        <div class="card-text">
-                            <div class="workText">
-                                <h2>Multi-Post Stories</h2>
-                                <p>
-                                    A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a standard dummy text.
-                                </p>
-                            </div>
-                            <ul class="categories">
-                                <li>css</li>
-                                <li>html</li>
-                                <li>Bootstrap</li>
-                                <li>Ruby</li>
-                            </ul>
-                            <div class="btn">
-                                <button type="button">See Project</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="profile">
-
-                    </div>
-                    <div class="card-items">
-                        <div class="card-text">
-                            <div class="workText">
-                                <h2>Multi-Post Stories</h2>
-                                <p>
-                                    A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a standard dummy text.
-                                </p>
-                            </div>
-                            <ul class="categories">
-                                <li>css</li>
-                                <li>html</li>
-                                <li>Bootstrap</li>
-                                <li>Ruby</li>
-                            </ul>
-                            <div class="btn">
-                                <button type="button">See Project</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="profile">
-
-                    </div>
-                    <div class="card-items">
-                        <div class="card-text">
-                            <div class="workText">
-                                <h2>Multi-Post Stories</h2>
-                                <p>
-                                    A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a standard dummy text.
-                                </p>
-                            </div>
-                            <ul class="categories">
-                                <li>css</li>
-                                <li>html</li>
-                                <li>Bootstrap</li>
-                                <li>Ruby</li>
-                            </ul>
-                            <div class="btn">
-                                <button type="button">See Project</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="profile">
-
-                    </div>
-                    <div class="card-items">
-                        <div class="card-text">
-                            <div class="workText">
-                                <h2>Multi-Post Stories</h2>
-                                <p>
-                                    A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a standard dummy text.
-                                </p>
-                            </div>
-                            <ul class="categories">
-                                <li>css</li>
-                                <li>html</li>
-                                <li>Bootstrap</li>
-                                <li>Ruby</li>
-                            </ul>
-                            <div class="btn">
-                                <button type="button">See Project</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="cards" id="projects-section">
             </div>
         </section>
     </div>
@@ -239,30 +141,27 @@
     </section>
     
     <!--  Modal Section -->
-    <div class="modal">
+    <div class="modal hide">
         <div class="overlay">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h2 class="modal-title">Multi-Post Stories </h2>
+                    <h2 class="modal-title" id="modal-title">Multi-Post Stories </h2>
                     <img src="./assets/images/bars/Icon.svg" id="closeModal" alt="close button">
                 </div>
                 <div class="modal-body">
                     <div class="modal-profile">
-                        <img src="./assets/images/bars/SnapshootPortfolio.svg" alt="project profile">
+                        <img src="./assets/images/bars/SnapshootPortfolio.svg" id="modal-img" alt="project profile">
                     </div>
                     <div class="modal-description">
-                        <p>
+                        <p id="modal-text">
                             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting  ever since the 1500s, when an unknown printer took a galley of type veris lapoa todoe.
                         </p>
                     </div>
-                    <ul class="modal-list">
-                        <li>html</li>
-                        <li>Ruby on Rails</li>
-                        <li>css</li>
+                    <ul class="modal-list" id="modal-tags">
                     </ul>
                     <div class="modal-btn">
-                        <button type="button" class=" btn see-live">See Live <img src="./assets/images/bars/Icon-live.svg" alt="button img"></button>
-                        <button type="button" class=" btn see-source">See Source <img src="./assets/images/bars/Vector-source.svg" alt="button img"></button>
+                        <a href="#" class=" btn see-live" id="modal-live">See Live <img src="./assets/images/bars/Icon-live.svg" alt="button img"></a>
+                        <a href="#" class=" btn see-source" id="modal-source">See Source <img src="./assets/images/bars/Vector-source.svg" alt="button img"></a>
                         
                     </div>
                 </div>

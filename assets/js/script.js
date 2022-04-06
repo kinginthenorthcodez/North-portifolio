@@ -2,7 +2,7 @@ const mainMenu = document.querySelector('#main-menu');
 const btnMenu = document.querySelector('#btn-menu');
 const menuImg = document.querySelector('#menu-img');
 const menuItems = document.querySelectorAll('.menu-item a');
-
+const projectsSection = document.querySelector('#projects-section');
 // Modal
 
 const closeModal = document.querySelector('#closeModal');
@@ -86,6 +86,37 @@ const projects = [
   },
 ];
 
+for (let i = 0; i < projects.length; i++) {
+  let project = projects[i];
+  let tags = '';
+  project.technologies.forEach((tag) => {
+    tags += `<li>${tag}</li>`;
+  });
+  let projectContent = `
+                  <div class="card">
+                    <div class="profile" style="background-image: url('${project.image}');">
+                    </div>
+                    <div class="card-items">
+                        <div class="card-text">
+                            <div class="workText">
+                                <h2>${project.name}</h2>
+                                <p>
+                                    ${project.description} 
+                                </p>
+                            </div>
+                            <ul class="categories">
+                              ${tags} 
+                            </ul>
+                            <div class="btn">
+                                <button type="button" data-id="${project.id}">See Project</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+  `;
+  projectsSection.innerHTML += projectContent;
+}
+
 function swapIcon() {
   if (mainMenu.classList.contains('mobile-hide')) {
     menuImg.src = './assets/images/bars/close.png';
@@ -109,3 +140,47 @@ menuItems.forEach((menuList) => {
 closeModal.addEventListener('click', () => {
   pModal.classList.add('hide');
 });
+
+window.addEventListener('load', () => {
+  const projectBtns = document.querySelectorAll('[data-id]');
+  for (let i = 0; i < projectBtns.length; i += 1) {
+    projectBtns[i].addEventListener('click', (btn) => {
+      let id = btn.target.getAttribute('data-id');
+      updateModal(findProject(id));
+      // document.querySelector('body').style.overflowY = 'hidden';
+      pModal.classList.toggle('hide');
+      pModal.style.top = window.pageYOffset + 'px';
+    });
+  }
+});
+
+function findProject(id) {
+  for (let project in projects) {
+    if (projects[project].id == id) {
+      return projects[project];
+    }
+  }
+  return null;
+}
+
+function updateModal(project) {
+  const Title = document.querySelector('#modal-title');
+  const Img = document.querySelector('#modal-img');
+  const Tags = document.querySelector('#modal-tags');
+  const Text = document.querySelector('#modal-text');
+  const Live = document.querySelector('#modal-live');
+  const Source = document.querySelector('#modal-source');
+
+  let tags = '';
+  project.technologies.forEach((tag) => {
+    tags += `<li>${tag}</li>`;
+  });
+
+  console.log(Source) 
+  Title.textContent = project.name;
+  Img.src = project.image;
+  Tags.innerHTML = tags;
+  Text.textContent = project.description;
+  Live.href = project.link;
+  Source.href = project.source;
+}
