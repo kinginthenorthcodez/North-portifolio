@@ -1307,8 +1307,8 @@ footer .email {
   bottom: 0px;
   background: rgba(255, 255, 255, 0.12);
   border: 1px solid #fff;
-  box-shadow: 0px 48px 48px rgba(37, 47, 137, 0.08);
-  backdrop-filter: blur(10px);
+  box-shadow: 0px 48px 48px rgba(37, 47, 137, 0.7);
+  backdrop-filter: blur(90px);
 }
 
 .modal-header {
@@ -1360,10 +1360,14 @@ footer .email {
   height: 505px;
   left: calc(50% - 279px/2); 
   top: 106px;
+  display: flex;
+  justify-content: center;
 }
 
 .modal-profile img {
   max-width: 100% !important;
+  max-height: 500px;
+  margin: 0 auto;
 }
 
 .modal-description {
