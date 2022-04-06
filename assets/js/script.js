@@ -3,6 +3,11 @@ const btnMenu = document.querySelector('#btn-menu');
 const menuImg = document.querySelector('#menu-img');
 const menuItems = document.querySelectorAll('.menu-item a');
 
+// Modal
+
+const closeModal = document.querySelector('#closeModal');
+const pModal = document.querySelector('.modal');
+
 function swapIcon() {
   if (mainMenu.classList.contains('mobile-hide')) {
     menuImg.src = './assets/images/bars/close.png';
@@ -22,3 +27,7 @@ menuItems.forEach((menuList) => {
     menuImg.src = './assets/images/bars/IconMenu.png';
   });
 });
+
+closeModal.addEventListener('click', () => {
+  pModal.classList.add('hide')
+})

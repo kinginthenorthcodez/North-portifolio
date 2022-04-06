@@ -1442,3 +1442,7 @@ footer .email {
   width: 124px;
   left: calc(50% - 124px/2);
 }
+
+.hide {
+  display: none;
+}
