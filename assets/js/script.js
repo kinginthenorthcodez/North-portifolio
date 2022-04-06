@@ -86,13 +86,13 @@ const projects = [
   },
 ];
 
-for (let i = 0; i < projects.length; i++) {
-  let project = projects[i];
+for (let i = 0; i < projects.length; i +=1) {
+  const project = projects[i];
   let tags = '';
   project.technologies.forEach((tag) => {
     tags += `<li>${tag}</li>`;
   });
-  let projectContent = `
+  const projectContent = `
                   <div class="card">
                     <div class="profile" style="background-image: url('${project.image}');">
                     </div>
@@ -141,28 +141,6 @@ closeModal.addEventListener('click', () => {
   pModal.classList.add('hide');
 });
 
-window.addEventListener('load', () => {
-  const projectBtns = document.querySelectorAll('[data-id]');
-  for (let i = 0; i < projectBtns.length; i += 1) {
-    projectBtns[i].addEventListener('click', (btn) => {
-      let id = btn.target.getAttribute('data-id');
-      updateModal(findProject(id));
-      // document.querySelector('body').style.overflowY = 'hidden';
-      pModal.classList.toggle('hide');
-      pModal.style.top = window.pageYOffset + 'px';
-    });
-  }
-});
-
-function findProject(id) {
-  for (let project in projects) {
-    if (projects[project].id == id) {
-      return projects[project];
-    }
-  }
-  return null;
-}
-
 function updateModal(project) {
   const Title = document.querySelector('#modal-title');
   const Img = document.querySelector('#modal-img');
@@ -184,3 +162,26 @@ function updateModal(project) {
   Live.href = project.link;
   Source.href = project.source;
 }
+
+function findProject(id) {
+  for (let project in projects) {
+    if (projects[project].id == id) {
+      return projects[project];
+    }
+  }
+  return null;
+}
+
+window.addEventListener('load', () => {
+  const projectBtns = document.querySelectorAll('[data-id]');
+  for (let i = 0; i < projectBtns.length; i += 1) {
+    projectBtns[i].addEventListener('click', (btn) => {
+      const id = btn.target.getAttribute('data-id');
+      updateModal(findProject(id));
+      // document.querySelector('body').style.overflowY = 'hidden';
+      pModal.classList.toggle('hide');
+      pModal.style.top = window.pageYOffset + 'px';
+    });
+  }
+});
+
