@@ -154,7 +154,6 @@ function updateModal(project) {
     tags += `<li>${tag}</li>`;
   });
 
-  console.log(Source) 
   Title.textContent = project.name;
   Img.src = project.image;
   Tags.innerHTML = tags;
@@ -164,8 +163,8 @@ function updateModal(project) {
 }
 
 function findProject(id) {
-  for (let project in projects) {
-    if (projects[project].id == id) {
+  for (const project in projects) {
+    if (projects[project].id === id) {
       return projects[project];
     }
   }
@@ -180,8 +179,7 @@ window.addEventListener('load', () => {
       updateModal(findProject(id));
       // document.querySelector('body').style.overflowY = 'hidden';
       pModal.classList.toggle('hide');
-      pModal.style.top = window.pageYOffset + 'px';
+      pModal.style.top = `${window.pageYOffset}px`;
     });
   }
 });
-
