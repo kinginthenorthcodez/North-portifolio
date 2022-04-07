@@ -86,7 +86,7 @@ const projects = [
   },
 ];
 
-for (let i = 0; i < projects.length; i +=1) {
+for (let i = 0; i < projects.length; i += 1) {
   const project = projects[i];
   let tags = '';
   project.technologies.forEach((tag) => {
@@ -134,7 +134,6 @@ menuItems.forEach((menuList) => {
   menuList.addEventListener('click', () => {
     mainMenu.classList.toggle('mobile-hide');
     menuImg.src = './assets/images/bars/IconMenu.png';
-    
   });
 });
 
@@ -142,10 +141,10 @@ closeModal.addEventListener('click', () => {
   pModal.classList.add('hide');
 });
 
-function findProject(id) { 
-  for (const project in projects) {
-    if (projects[project].id == id) {
-      return projects[project];
+function findProject(id) {
+  for (let i = 0; i < projects.length; i += 1) {
+    if (projects[i].id === Number(id)) {
+      return projects[i];
     }
   }
   return null;
@@ -161,8 +160,8 @@ function updateModal(project) {
   let tags = '';
   project.technologies.forEach((tag) => {
     tags += `<li>${tag}</li>`;
-  
-  });
+});
+
   Title.textContent = project.name;
   Img.src = project.image;
   Tags.innerHTML = tags;
