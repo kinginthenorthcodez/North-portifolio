@@ -4,7 +4,7 @@ const menuImg = document.querySelector('#menu-img');
 const menuItems = document.querySelectorAll('.menu-item a');
 const projectsSection = document.querySelector('#projects-section');
 
-const form =document.querySelector('.contact-form');
+const form = document.querySelector('.contact-form');
 const email = document.querySelector('#email');
 
 // Modal
@@ -189,3 +189,13 @@ window.addEventListener('load', () => {
 
 // Form validation
 
+form.addEventListener('submit', (event) => {
+  if (email.value.toLowerCase() !== email.value) {
+    event.preventDefault();
+    const emailError = document.querySelector('#email-error');
+    emailError.textContent = 'The email must be in lowercase letters';
+    emailError.classList.remove('hide');
+  } else {
+    emailError.classList.toggle('hide');
+  }
+});
