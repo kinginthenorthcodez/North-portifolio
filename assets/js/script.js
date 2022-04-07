@@ -3,6 +3,10 @@ const btnMenu = document.querySelector('#btn-menu');
 const menuImg = document.querySelector('#menu-img');
 const menuItems = document.querySelectorAll('.menu-item a');
 const projectsSection = document.querySelector('#projects-section');
+
+const form =document.querySelector('.contact-form');
+const email = document.querySelector('#email');
+
 // Modal
 
 const closeModal = document.querySelector('#closeModal');
@@ -182,3 +186,6 @@ window.addEventListener('load', () => {
     });
   }
 });
+
+// Form validation
+
