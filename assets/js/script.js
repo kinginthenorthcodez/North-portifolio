@@ -134,6 +134,7 @@ menuItems.forEach((menuList) => {
   menuList.addEventListener('click', () => {
     mainMenu.classList.toggle('mobile-hide');
     menuImg.src = './assets/images/bars/IconMenu.png';
+    
   });
 });
 
@@ -141,34 +142,33 @@ closeModal.addEventListener('click', () => {
   pModal.classList.add('hide');
 });
 
+function findProject(id) { 
+  for (const project in projects) {
+    if (projects[project].id == id) {
+      return projects[project];
+    }
+  }
+  return null;
+}
+
 function updateModal(project) {
   const Title = document.querySelector('#modal-title');
   const Img = document.querySelector('#modal-img');
   const Tags = document.querySelector('#modal-tags');
   const Text = document.querySelector('#modal-text');
-  const Live = document.querySelector('#modal-live');
-  const Source = document.querySelector('#modal-source');
-
+  // const Live = document.querySelector('#modal-live');
+  // const Source = document.querySelector('#modal-source');
   let tags = '';
   project.technologies.forEach((tag) => {
     tags += `<li>${tag}</li>`;
+  
   });
-
   Title.textContent = project.name;
   Img.src = project.image;
   Tags.innerHTML = tags;
   Text.textContent = project.description;
-  Live.href = project.link;
-  Source.href = project.source;
-}
-
-function findProject(id) {
-  for (const project in projects) {
-    if (projects[project].id === id) {
-      return projects[project];
-    }
-  }
-  return null;
+  // Live.href = project.link;
+  // Source.href = project.source;
 }
 
 window.addEventListener('load', () => {
