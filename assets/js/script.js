@@ -160,7 +160,7 @@ function updateModal(project) {
   let tags = '';
   project.technologies.forEach((tag) => {
     tags += `<li>${tag}</li>`;
-});
+  });
 
   Title.textContent = project.name;
   Img.src = project.image;
