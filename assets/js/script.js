@@ -139,7 +139,7 @@ menuItems.forEach((menuList) => {
 
 closeModal.addEventListener('click', () => {
   pModal.classList.add('hide');
-  document.querySelector('body').style.overflow='auto';
+  document.querySelector('body').style.overflow = 'auto';
 });
 
 function findProject(id) {
