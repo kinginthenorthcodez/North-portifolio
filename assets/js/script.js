@@ -148,6 +148,7 @@ menuItems.forEach((menuList) => {
 
 closeModal.addEventListener('click', () => {
   pModal.classList.add('hide');
+  document.querySelector('body').style.overflow = 'auto';
 });
 
 function findProject(id) {
@@ -185,7 +186,7 @@ window.addEventListener('load', () => {
     projectBtns[i].addEventListener('click', (btn) => {
       const id = btn.target.getAttribute('data-id');
       updateModal(findProject(id));
-      // document.querySelector('body').style.overflowY = 'hidden';
+      document.querySelector('body').style.overflowY = 'hidden';
       pModal.classList.toggle('hide');
       pModal.style.top = `${window.pageYOffset}px`;
     });
