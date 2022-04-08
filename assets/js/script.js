@@ -165,8 +165,8 @@ function updateModal(project) {
   const Img = document.querySelector('#modal-img');
   const Tags = document.querySelector('#modal-tags');
   const Text = document.querySelector('#modal-text');
-  // const Live = document.querySelector('#modal-live');
-  // const Source = document.querySelector('#modal-source');
+  const Live = document.querySelector('#modal-live');
+  const Source = document.querySelector('#modal-source');
   let tags = '';
   project.technologies.forEach((tag) => {
     tags += `<li>${tag}</li>`;
@@ -176,8 +176,8 @@ function updateModal(project) {
   Img.src = project.image;
   Tags.innerHTML = tags;
   Text.textContent = project.description;
-  // Live.href = project.link;
-  // Source.href = project.source;
+  Live.href = project.link;
+  Source.href = project.source;
 }
 
 window.addEventListener('load', () => {
