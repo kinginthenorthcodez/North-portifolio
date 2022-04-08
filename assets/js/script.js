@@ -194,31 +194,31 @@ window.addEventListener('load', () => {
 
 const formInputs = document.querySelectorAll('.form-field');
 const dataHive = {
-  userName:'North',
+  userName: 'North',
   email: 'email@gmail.com',
-  textMsg: 'Nihao!'
-}
+  textMsg: 'Nihao!',
+};
 
 const formDataHive = JSON.parse(localStorage.getItem('dataHive'));
-if(formDataHive) {
- for (let i = 0; i < formInputs.length; i++) {
-  formInputs[i].value = formDataHive[formInputs[i].name]
- }
+if (formDataHive) {
+  for (let i = 0; i < formInputs.length; i += 1) {
+    formInputs[i].value = formDataHive[formInputs[i].name];
+  }
 }
 
 // Update dataHive object with form inputs
 
 function updateDataHive(name, value) {
   dataHive[name] = value;
-  localStorage.setItem('dataHive',JSON.stringify(dataHive));
+  localStorage.setItem('dataHive', JSON.stringify(dataHive));
 }
 
 // Listen for inputs on form data
 
-for (let i = 0; i < formInputs.length; i++) {
+for (let i = 0; i < formInputs.length; i += 1) {
   formInputs[i].addEventListener('input', (e) => {
     updateDataHive(e.target.name, e.target.value);
-  })
+  });
 }
 
 // Form validation
