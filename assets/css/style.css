@@ -1471,3 +1471,14 @@ footer .email {
 
   /* end of desktop version */
 }
+
+.error {
+  position: relative;
+  width: 100%;
+  background-color: #f44;
+  color: #fff;
+  text-align: left;
+  font-family: 'Crete Round', sans-serif;
+  top: 20px;
+  padding: 4px 6px;
+}

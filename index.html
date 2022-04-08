@@ -113,11 +113,14 @@
         <h1 class="headtwo"> Let's Chat </h1>
         <p>If you have an application you are interested in developing, a feature that you need built or a project that needs coding. I’d love to help with it
         </p>
-        <form class="contact-form" action="https://formspree.io/f/mknyzlre" method="post">
-            <input type="text" name="username" placeholder="Name" maxlength="30" required>
-            <input type="email" name="email" placeholder="jeremy@gmail.com" maxlength="30" required>
-            <textarea name="text" placeholder="Enter text here" maxlength="500" required>
-</textarea>
+        <form class="contact-form" action="https://formspree.io/f/mknyzlre" method="post" >
+            <input type="text" id="user-name" name="username" placeholder="Name" maxlength="30" required>
+            <span class="error hide" id="name-error"></span>
+            <input type="email" id="email" name="email" placeholder="jeremy@gmail.com" maxlength="30" required>
+            <span class="error hide" id="email-error"></span>
+            <textarea name="text" id="message" placeholder="Enter text here" maxlength="500" required>
+            </textarea>
+            <span class="error hide" id="msg-error"></span>
 
             <div class="btn">
                 <button type="submit">Send</button>

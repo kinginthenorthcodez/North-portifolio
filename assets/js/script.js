@@ -3,6 +3,12 @@ const btnMenu = document.querySelector('#btn-menu');
 const menuImg = document.querySelector('#menu-img');
 const menuItems = document.querySelectorAll('.menu-item a');
 const projectsSection = document.querySelector('#projects-section');
+
+// Form validation
+
+const form = document.querySelector('.contact-form');
+const email = document.querySelector('#email');
+
 // Modal
 
 const closeModal = document.querySelector('#closeModal');
@@ -156,8 +162,8 @@ function updateModal(project) {
   const Img = document.querySelector('#modal-img');
   const Tags = document.querySelector('#modal-tags');
   const Text = document.querySelector('#modal-text');
-  // const Live = document.querySelector('#modal-live');
-  // const Source = document.querySelector('#modal-source');
+  const Live = document.querySelector('#modal-live');
+  const Source = document.querySelector('#modal-source');
   let tags = '';
   project.technologies.forEach((tag) => {
     tags += `<li>${tag}</li>`;
@@ -167,8 +173,8 @@ function updateModal(project) {
   Img.src = project.image;
   Tags.innerHTML = tags;
   Text.textContent = project.description;
-  // Live.href = project.link;
-  // Source.href = project.source;
+  Live.href = project.link;
+  Source.href = project.source;
 }
 
 window.addEventListener('load', () => {
@@ -181,5 +187,48 @@ window.addEventListener('load', () => {
       pModal.classList.toggle('hide');
       pModal.style.top = `${window.pageYOffset}px`;
     });
+  }
+});
+
+// Form validation
+
+const isRequired = (value) => value !== '';
+const isEmailValid = (email) => {
+  const reg = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return reg.test(email);
+};
+const msgError = document.querySelector('#msg-error');
+function handleError(input, erroMsg) {
+  input.textContent = erroMsg;
+  input.classList.remove('hide');
+}
+
+function handleSuccess(input, successMsg) {
+  input.textContent = successMsg;
+  input.classList.toggle('hide');
+}
+
+function checkEmail() {
+  let valid = false;
+  const emailV = email.value.trim();
+  if (email.value.toLowerCase() !== email.value) {
+    handleError(msgError, 'Email should be lowercase!');
+  } else if (!isRequired(emailV)) {
+    handleError(msgError, 'Please fill in email!');
+  } else if (!isEmailValid(emailV)) {
+    handleError(msgError, 'Enter valid email!');
+  } else {
+    handleSuccess(msgError, 'Valid!');
+    msgError.style = 'background-color: green;';
+    valid = true;
+  }
+  return valid;
+}
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const isValidEmail = checkEmail();
+  if (isValidEmail) {
+    form.submit();
   }
 });
