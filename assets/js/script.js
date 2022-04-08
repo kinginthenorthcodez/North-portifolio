@@ -8,8 +8,6 @@ const projectsSection = document.querySelector('#projects-section');
 
 const form = document.querySelector('.contact-form');
 const email = document.querySelector('#email');
-const userName = document.querySelector('#user-name');
-const textArea = document.querySelector('#message');
 
 // Modal
 
