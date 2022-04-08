@@ -195,12 +195,11 @@ window.addEventListener('load', () => {
 // Form validation
 
 const isRequired = (value) => value !== '';
-const isBetween = (len, min, max) => (len > min && len < max);
 const isEmailValid = (email) => {
   const reg = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   return reg.test(email);
 };
-
+const msgError = document.querySelector('#msg-error');
 function handleError(input, erroMsg) {
   input.textContent = erroMsg;
   input.classList.remove('hide');
@@ -209,71 +208,29 @@ function handleError(input, erroMsg) {
 function handleSuccess(input, successMsg) {
   input.textContent = successMsg;
   input.classList.toggle('hide');
-  userName.style = 'outline: 3px solid green;';
-}
-
-function checkName() {
-  const username = userName.value.trim();
-  let valid = false;
-  const min = 2;
-  const max = 30;
-  const nameError = document.querySelector('#name-error');
-  if (!isRequired(username)) {
-    handleError(nameError, 'Enter valid name atleast!');
-  } else if (!isBetween(username.length, min, max)) {
-    handleError(nameError, 'User name should be between 2 and 30 long');
-  } else {
-    handleSuccess(nameError, 'Good name!');
-    nameError.style = 'background-color: green;';
-    valid = true;
-  }
-  return valid;
 }
 
 function checkEmail() {
   let valid = false;
   const emailV = email.value.trim();
-  const emailError = document.querySelector('#email-error');
   if (email.value.toLowerCase() !== email.value) {
-    handleError(emailError, 'Email should be lowercase!');
+    handleError(msgError, 'Email should be lowercase!');
   } else if (!isRequired(emailV)) {
-    handleError(emailError, 'Please fill in email!');
+    handleError(msgError, 'Please fill in email!');
   } else if (!isEmailValid(emailV)) {
-    handleError(emailError, 'Enter valid email!');
-  } else {
-    handleSuccess(emailError, 'Valid!');
-    emailError.style = 'background-color: green;';
-    valid = true;
-  }
-  return valid;
-}
-
-const checkMessage = () => {
-  const min = 10;
-  const max = 500;
-  const msg = textArea.value.trim();
-  let valid = false;
-  const msgError = document.querySelector('#msg-error');
-  if (!isRequired(msg)) {
-    handleError(msgError, 'Please enter a message');
-  } else if (!isBetween(msg.length, min, max)) {
-    handleError(msgError, 'Message should be between 10 to 500');
+    handleError(msgError, 'Enter valid email!');
   } else {
     handleSuccess(msgError, 'Valid!');
     msgError.style = 'background-color: green;';
     valid = true;
   }
   return valid;
-};
+}
 
 form.addEventListener('submit', (event) => {
   event.preventDefault();
-  const isValidUser = checkName();
   const isValidEmail = checkEmail();
-  const isValidMessage = checkMessage();
-  const isValidForm = isValidUser && isValidEmail && isValidMessage;
-
-  if (isValidForm) {
+  if (isValidEmail) {
     form.submit();
   }
 });
