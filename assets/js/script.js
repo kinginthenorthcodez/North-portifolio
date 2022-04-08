@@ -269,11 +269,11 @@ const checkMessage = () => {
 form.addEventListener('submit', (event) => {
   event.preventDefault();
   const isValidUser = checkName();
-  const isValidEmail =  checkEmail();
+  const isValidEmail = checkEmail();
   const isValidMessage = checkMessage();
   const isValidForm = isValidUser && isValidEmail && isValidMessage;
 
   if (isValidForm) {
     form.submit();
-  };
+  }
 });
