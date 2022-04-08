@@ -4,14 +4,14 @@ const menuImg = document.querySelector('#menu-img');
 const menuItems = document.querySelectorAll('.menu-item a');
 const projectsSection = document.querySelector('#projects-section');
 
- //Form validation
+// Form validation
 
 const form = document.querySelector('.contact-form');
 const email = document.querySelector('#email');
 const userName = document.querySelector('#user-name');
 const textArea = document.querySelector('#message');
 
- // Modal
+// Modal
 
 const closeModal = document.querySelector('#closeModal');
 const pModal = document.querySelector('.modal');
@@ -204,13 +204,13 @@ const isEmailValid = (email) => {
 function handleError(input, erroMsg) {
   input.textContent = erroMsg;
   input.classList.remove('hide');
-};
+}
 
 function handleSuccess(input, successMsg) {
   input.textContent = successMsg;
   input.classList.toggle('hide');
   userName.style = 'outline: 3px solid green;';
-};
+}
 
 function checkName() {
   const username = userName.value.trim();
@@ -220,17 +220,17 @@ function checkName() {
   const nameError = document.querySelector('#name-error');
   if (!isRequired(username)) {
     handleError(nameError, 'Enter valid name atleast!');
-  }else if (!isBetween(username.length, min ,max)){
+  }
+  else if (!isBetween(username.length, min, max)) {
     handleError(nameError, 'User name should be between 2 and 30 long');
   }
   else {
     handleSuccess(nameError, 'Good name!');
     nameError.style = 'background-color: green;';
     valid = true;
-  };
+  }
   return valid;
-};
-
+}
 
 function checkEmail() {
   let valid = false;
@@ -238,31 +238,27 @@ function checkEmail() {
   const emailError = document.querySelector('#email-error');
   if (email.value.toLowerCase() !== email.value) {
     handleError(emailError, 'Email should be lowercase!');
-  }
-  else if (!isRequired(emailV)) {
+  } else if (!isRequired(emailV)) {
     handleError(emailError, 'Please fill in email!');
-  }
-  else if (!isEmailValid(emailV)) {
-    handleError(emailError, 'Enter valid email!')
-  }
-  else {
+  } else if (!isEmailValid(emailV)) {
+    handleError(emailError, 'Enter valid email!');
+  } else {
     handleSuccess(emailError, 'Valid!');
     emailError.style = 'background-color: green;';
     valid = true;
   }
-    return valid;
-};
+  return valid;
+ }
 
-const checkMessage = () => {
+  const checkMessage = () => {
   const min = 10;
   const max = 500;
   const msg = textArea.value.trim();
   let valid = false;
   const msgError = document.querySelector('#msg-error');
   if (!isRequired(msg)){
-     handleError(msgError, 'Please enter a message');
-  }
-  else if (!isBetween(msg.length, min, max)) {
+    handleError(msgError, 'Please enter a message');
+  } else if (!isBetween(msg.length, min, max)) {
     handleError(msgError, 'Message should be between 10 to 500');
   }
   else {
@@ -275,7 +271,7 @@ const checkMessage = () => {
 
 form.addEventListener('submit', (event) => {
   event.preventDefault();
-  const isValidUser = checkName(); 
+  const isValidUser = checkName();
   const isValidEmail =  checkEmail();
   const isValidMessage = checkMessage();
   const isValidForm = isValidUser && isValidEmail && isValidMessage;
