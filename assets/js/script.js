@@ -220,11 +220,9 @@ function checkName() {
   const nameError = document.querySelector('#name-error');
   if (!isRequired(username)) {
     handleError(nameError, 'Enter valid name atleast!');
-  }
-  else if (!isBetween(username.length, min, max)) {
+  } else if (!isBetween(username.length, min, max)) {
     handleError(nameError, 'User name should be between 2 and 30 long');
-  }
-  else {
+  } else {
     handleSuccess(nameError, 'Good name!');
     nameError.style = 'background-color: green;';
     valid = true;
@@ -248,20 +246,19 @@ function checkEmail() {
     valid = true;
   }
   return valid;
- }
+}
 
-  const checkMessage = () => {
+const checkMessage = () => {
   const min = 10;
   const max = 500;
   const msg = textArea.value.trim();
   let valid = false;
   const msgError = document.querySelector('#msg-error');
-  if (!isRequired(msg)){
+  if (!isRequired(msg)) {
     handleError(msgError, 'Please enter a message');
   } else if (!isBetween(msg.length, min, max)) {
     handleError(msgError, 'Message should be between 10 to 500');
-  }
-  else {
+  } else {
     handleSuccess(msgError, 'Valid!');
     msgError.style = 'background-color: green;';
     valid = true;
