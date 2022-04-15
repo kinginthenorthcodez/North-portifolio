@@ -1,4 +1,3 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
 
 # My Portifolio
 ![screenshot](./app_screenshot.png)
