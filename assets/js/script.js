@@ -17,36 +17,36 @@ const pModal = document.querySelector('.modal');
 const projects = [
   {
     id: 1,
-    name: 'Ecommerce website',
+    name: 'Creative Space website',
     description:
-      'A website for a fictional ecommerce company lorem A website for a fictional ecommerce company lorem A website for a fictional ecommerce company lorem A website for a fictional ecommerce company lorem',
+      'A space for the craatives to empower and build innovative solutions together .',
     image:
-      'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=815&q=80',
-    technologies: ['HTML', 'CSS', 'JavaScript', 'Ruby', 'My SQL'],
-    link: 'https://kinginthenorthcodez.github.io/North-portifolio/',
-    source: 'https://github.com/kinginthenorthcodez/North-portifolio',
+      './assets/images/creativeapp.png',
+    technologies: ['HTML', 'CSS', 'JavaScript', 'LOCAL STORAGE API'],
+    link: 'https://kinginthenorthcodez.github.io/capstone-project-1/',
+    source: 'https://github.com/kinginthenorthcodez/capstone-project-1',
   },
   {
     id: 2,
-    name: 'Finance App',
+    name: 'Awesome Book App',
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis voluptatibus aliquid suscipit odit, eveniet nisi impedit nam placeat labore excepturi nulla facere ratione cupiditate culpa iure vel aliquam eum dolore.',
+      'Built a book library using JavaScript classes and used localStorage to save the data.',
     image:
-      'https://images.unsplash.com/photo-1542744173-05336fcc7ad4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1102&q=80',
-    technologies: ['HTML', 'CSS', 'JavaScript', 'Ruby'],
-    link: 'https://kinginthenorthcodez.github.io/North-portifolio/',
-    source: 'https://github.com/kinginthenorthcodez/North-portifolio',
+      './assets/images/awesomeBook3.png',
+    technologies: ['HTML', 'CSS', 'JavaScript', 'Modules'],
+    link: 'https://github.com/kinginthenorthcodez/sandox/',
+    source: 'https://github.com/kinginthenorthcodez/sandox',
   },
   {
     id: 3,
-    name: 'Marketing Analysis',
+    name: 'ToDo List App',
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis voluptatibus aliquid suscipit odit, eveniet nisi impedit nam placeat labore excepturi nulla facere ratione cupiditate culpa iure vel aliquam eum dolore.',
+      'To-do list" is a tool that helps to organize your day.',
     image:
-      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
-    technologies: ['HTML', 'CSS', 'JavaScript', 'Ruby'],
-    link: 'https://kinginthenorthcodez.github.io/North-portifolio/',
-    source: 'https://github.com/kinginthenorthcodez/North-portifolio',
+      './assets/images/Todoapp.png',
+    technologies: ['HTML', 'CSS', 'JavaScript', 'Webpack', 'ES6'],
+    link: 'https://kinginthenorthcodez.github.io/To-Do-List/',
+    source: 'https://github.com/kinginthenorthcodez/To-Do-List',
   },
   {
     id: 4,
