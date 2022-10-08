@@ -20,8 +20,7 @@ const projects = [
     name: 'Creative Space website',
     description:
       'A space for the craatives to empower and build innovative solutions together .',
-    image:
-      './assets/images/creativeapp.png',
+    image: './assets/images/creativeapp.png',
     technologies: ['HTML', 'CSS', 'JavaScript', 'LOCAL STORAGE API'],
     link: 'https://kinginthenorthcodez.github.io/capstone-project-1/',
     source: 'https://github.com/kinginthenorthcodez/capstone-project-1',
@@ -31,8 +30,7 @@ const projects = [
     name: 'Awesome Book App',
     description:
       'Built a book library using JavaScript classes and used localStorage to save the data.',
-    image:
-      './assets/images/awesomeBook3.png',
+    image: './assets/images/awesomeBook3.png',
     technologies: ['HTML', 'CSS', 'JavaScript', 'Modules'],
     link: 'https://github.com/kinginthenorthcodez/sandox/',
     source: 'https://github.com/kinginthenorthcodez/sandox',
@@ -40,10 +38,8 @@ const projects = [
   {
     id: 3,
     name: 'ToDo List App',
-    description:
-      'To-do list" is a tool that helps to organize your day.',
-    image:
-      './assets/images/Todoapp.png',
+    description: 'To-do list" is a tool that helps to organize your day.',
+    image: './assets/images/Todoapp.png',
     technologies: ['HTML', 'CSS', 'JavaScript', 'Webpack', 'ES6'],
     link: 'https://kinginthenorthcodez.github.io/To-Do-List/',
     source: 'https://github.com/kinginthenorthcodez/To-Do-List',
@@ -53,7 +49,8 @@ const projects = [
     name: 'Portfolio Page',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis voluptatibus aliquid suscipit odit, eveniet nisi impedit nam placeat labore excepturi nulla facere ratione cupiditate culpa iure vel aliquam eum dolore.',
-    image: 'https://i.pinimg.com/originals/6e/4b/2e/6e4b2e5e016ee15a405be4e09decfdc9.png',
+    image:
+      'https://i.pinimg.com/originals/6e/4b/2e/6e4b2e5e016ee15a405be4e09decfdc9.png',
     technologies: ['HTML', 'CSS', 'JavaScript'],
     link: 'https://kinginthenorthcodez.github.io/North-portifolio/',
     source: 'https://github.com/kinginthenorthcodez/North-portifolio',
@@ -74,7 +71,8 @@ const projects = [
     name: 'Bussiness booster',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis voluptatibus aliquid suscipit odit, eveniet nisi impedit nam placeat labore excepturi nulla facere ratione cupiditate culpa iure vel aliquam eum dolore.',
-    image: 'https://i.pinimg.com/originals/ed/de/b9/eddeb936e3c74afa5b0182f847fb59fd.png',
+    image:
+      'https://i.pinimg.com/originals/ed/de/b9/eddeb936e3c74afa5b0182f847fb59fd.png',
     technologies: ['HTML', 'CSS', 'JavaScript', 'Ruby'],
     link: 'https://kinginthenorthcodez.github.io/North-portifolio/',
     source: 'https://github.com/kinginthenorthcodez/North-portifolio',
@@ -199,12 +197,12 @@ const dataHive = {
   textMsg: 'Nihao!',
 };
 
-const formDataHive = JSON.parse(localStorage.getItem('dataHive'));
-if (formDataHive) {
-  for (let i = 0; i < formInputs.length; i += 1) {
-    formInputs[i].value = formDataHive[formInputs[i].name];
-  }
-}
+// const formDataHive = JSON.parse(localStorage.getItem('dataHive'));
+// if (formDataHive) {
+//   for (let i = 0; i < formInputs.length; i += 1) {
+//     formInputs[i].value = formDataHive[formInputs[i].name];
+//   }
+// }
 
 // Update dataHive object with form inputs
 
@@ -225,7 +223,8 @@ for (let i = 0; i < formInputs.length; i += 1) {
 
 const isRequired = (value) => value !== '';
 const isEmailValid = (email) => {
-  const reg = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  const reg =
+    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   return reg.test(email);
 };
 const msgError = document.querySelector('#msg-error');
@@ -263,3 +262,9 @@ form.addEventListener('submit', (event) => {
     form.submit();
   }
 });
+
+document.querySelector('.contact-form').onsubmit = (e) => {
+  e.target.submit();
+  e.target.reset();
+  return false;
+};
