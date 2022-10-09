@@ -46,47 +46,76 @@ const projects = [
   },
   {
     id: 4,
-    name: 'Portfolio Page',
+    name: 'leaderboard App',
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis voluptatibus aliquid suscipit odit, eveniet nisi impedit nam placeat labore excepturi nulla facere ratione cupiditate culpa iure vel aliquam eum dolore.',
-    image:
-      'https://i.pinimg.com/originals/6e/4b/2e/6e4b2e5e016ee15a405be4e09decfdc9.png',
-    technologies: ['HTML', 'CSS', 'JavaScript'],
+      'The leaderboard website displays scores submitted by different players. It also allows you to submit your score. All data is preserved thanks to the external Leaderboard API service.',
+    image: './assets/images/leaderboard.png',
+    technologies: [
+      'HTML',
+      'CSS',
+      'JavaScript',
+      'Webpack',
+      'Use ES6 modules',
+      'API',
+    ],
     link: 'https://kinginthenorthcodez.github.io/North-portifolio/',
-    source: 'https://github.com/kinginthenorthcodez/North-portifolio',
+    source: 'https://github.com/kinginthenorthcodez/Leaderboard-app-',
   },
   {
     id: 5,
-    name: 'WebDesign Agency',
+    name: 'Pennode app',
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis voluptatibus aliquid suscipit odit, eveniet nisi impedit nam placeat labore excepturi nulla facere ratione cupiditate culpa iure vel aliquam eum dolore.',
-    image:
-      'https://mldpshakfq9r.i.optimole.com/Q925PfU-6c8Cn91e/w:1200/h:683/q:auto/https://www.core365.co.uk/wp-content/uploads/2021/07/JLN-Website-Screenshot.jpg',
-    technologies: ['HTML', 'CSS', 'JavaScript'],
+      ' A Blog app that will show the list of posts and empower readers to interact with them by adding comments and liking posts. Share your experiences and stories with the cosmos of the pennoders.',
+    image: './assets/images/pen1.png',
+    technologies: [
+      'HTML',
+      'CSS',
+      'JavaScript',
+      'Ruby on Rails',
+      'Devise for authentication',
+    ],
     link: 'https://kinginthenorthcodez.github.io/North-portifolio/',
-    source: 'https://github.com/kinginthenorthcodez/North-portifolio',
+    source: 'https://github.com/kinginthenorthcodez/pennode',
   },
   {
     id: 6,
-    name: 'Bussiness booster',
+    name: 'Recipe App',
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis voluptatibus aliquid suscipit odit, eveniet nisi impedit nam placeat labore excepturi nulla facere ratione cupiditate culpa iure vel aliquam eum dolore.',
-    image:
-      'https://i.pinimg.com/originals/ed/de/b9/eddeb936e3c74afa5b0182f847fb59fd.png',
-    technologies: ['HTML', 'CSS', 'JavaScript', 'Ruby'],
-    link: 'https://kinginthenorthcodez.github.io/North-portifolio/',
-    source: 'https://github.com/kinginthenorthcodez/North-portifolio',
+      'The Recipe app keeps track of all your recipes and ingredients. It will allow you to save ingredients, keep track of what you have, create recipes, and generate a shopping list based on what you have and what you are missing from a recipe. Also, since sharing recipes is an important part of cooking the app should allow you to make them public so anyone can access them.',
+    image: './assets/images/recipeapp.png',
+    technologies: ['HTML', 'CSS', 'JavaScript', 'Ruby on Rails', 'postgresql'],
+    link: 'https://recipe-app-on-rials.herokuapp.com/',
+    source: 'https://github.com/kinginthenorthcodez/Recipe-app',
   },
   {
     id: 7,
-    name: 'Help Center',
+    name: 'Air Pollution App',
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis voluptatibus aliquid suscipit odit, eveniet nisi impedit nam placeat labore excepturi nulla facere ratione cupiditate culpa iure vel aliquam eum dolore.',
-    image:
-      'https://img.webdesign-inspiration.com/v7/webdesign-inspiration.com/uploads/design/2019-05/v2-zopim-com-52981.png?width=488',
-    technologies: ['HTML', 'CSS', 'JavaScript', 'Ruby'],
+      'Air Pollution Metrics app provides current, forecast and historical air pollution data for any coordinates on the globe, users can search by region(continent) or Country to get Metrics update in real time..',
+    image: './assets/images/Airpollutionapp.png',
+    technologies: ['HTML', 'CSS', 'JavaScript', 'React', 'Redux'],
+    link: 'https://kinginthenorthcodez.github.io/air-pollution-metric-app/',
+    source: 'https://github.com/kinginthenorthcodez/air-pollution-metric-app',
+  },
+  {
+    id: 8,
+    name: 'space-travellers-hub',
+    description:
+      ' The Space Travelers is a React, Redux application based on the SpaceX API.The user can reserve a rocket and it ll update the state automatically, reserve a dragon and it will update the state automatically, and also the user can join a mission in this application',
+    image: './assets/images/spaceX.png',
+    technologies: ['HTML', 'CSS', 'JavaScript', 'React', 'Redux', 'API'],
+    link: 'https://kinginthenorthcodez.github.io/space-travellers-hub/',
+    source: 'https://github.com/kinginthenorthcodez/space-travellers-hub',
+  },
+  {
+    id: 9,
+    name: 'BookStore React APP',
+    description:
+      'The Bookstore is a React-Redux application connected to an existing API to create and remove books in a remote server. Users can Display the list of books, Add and Remove a selected book..',
+    image: './assets/images/bookstore.png',
+    technologies: ['HTML', 'CSS', 'JavaScript', 'React', 'Redux'],
     link: 'https://kinginthenorthcodez.github.io/North-portifolio/',
-    source: 'https://github.com/kinginthenorthcodez/North-portifolio',
+    source: 'https://github.com/kinginthenorthcodez/bookstore',
   },
 ];
 
