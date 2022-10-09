@@ -58,7 +58,7 @@ const projects = [
       'Use ES6 modules',
       'API',
     ],
-    link: 'https://kinginthenorthcodez.github.io/North-portifolio/',
+    link: 'https://leaderboard-rush.netlify.app/',
     source: 'https://github.com/kinginthenorthcodez/Leaderboard-app-',
   },
   {
