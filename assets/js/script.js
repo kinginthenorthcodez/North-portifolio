@@ -117,6 +117,15 @@ const projects = [
     link: 'https://kinginthenorthcodez.github.io/North-portifolio/',
     source: 'https://github.com/kinginthenorthcodez/bookstore',
   },
+  {
+    id: 10,
+    name: 'Space-Watch React APP',
+    description: 'A min React app monitoring the sky using NASA data via API.',
+    image: './assets/images/space-watch.png',
+    technologies: ['HTML', 'CSS', 'JavaScript', 'React', 'Redux', 'API'],
+    link: 'https://space-watch.netlify.app/',
+    source: 'https://github.com/kinginthenorthcodez/space-watch',
+  },
 ];
 
 for (let i = 0; i < projects.length; i += 1) {
